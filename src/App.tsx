@@ -20,9 +20,11 @@ import { Footer } from './components/footer/Footer';
 
 import { Chatbot } from './components/chatbot/Chatbot';
 import { useLanguage } from './context/LanguageContext';
+import { useScrollReveal } from './hooks/useScrollReveal';
 
 export function AppContent() {
   const { language } = useLanguage();
+  useScrollReveal();
 
   return (
     <div className="min-h-screen flex flex-col bg-theme-main text-theme-primary transition-colors duration-300 relative">

@@ -43,8 +43,8 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-secondary">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-14 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('testimonials.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">
@@ -52,7 +52,7 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="relative bg-theme-card border border-theme-color rounded-3xl p-8 sm:p-12 theme-shadow transition-all">
+        <div data-reveal="scale" className="relative bg-theme-card border border-theme-color rounded-3xl p-8 sm:p-12 theme-shadow transition-all">
           <div className="text-(--primary-color)/20 text-5xl mb-6">
             <i className="fa-solid fa-quote-left"></i>
           </div>

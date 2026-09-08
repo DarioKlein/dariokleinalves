@@ -68,7 +68,7 @@ export function ExitIntentModal() {
           <a
             href="#projects"
             onClick={() => setIsOpen(false)}
-            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-theme-brand text-white font-medium hover:bg-(--primary-dark) transition-colors theme-shadow"
+            className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-theme-brand text-white font-medium hover:bg-(--brand-dark) transition-colors theme-shadow"
           >
             <i className="fa-solid fa-briefcase text-sm"></i>
             <span>{t('exit.viewProjects')}</span>

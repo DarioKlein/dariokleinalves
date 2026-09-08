@@ -7,16 +7,17 @@ export function Blog() {
   return (
     <section id="blog" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-main">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('blog.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">{t('blog.title')}</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="reveal-grid grid grid-cols-1 md:grid-cols-3 gap-8">
           {blogPosts.map(post => (
             <article
+              data-reveal="scale"
               key={post.id}
               className="bg-theme-card border border-theme-color rounded-2xl overflow-hidden theme-shadow transition-all duration-300 hover:-translate-y-2 hover:border-(--primary-color) flex flex-col justify-between group"
             >

@@ -17,8 +17,8 @@ export function Projects() {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-main">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-12 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('projects.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">
@@ -26,7 +26,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-12">
+        <div data-reveal="scale" className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-12">
           {(['all', 'frontend', 'backend', 'fullstack'] as Filter[]).map((filterKey) => (
             <button
               key={filterKey}
@@ -42,7 +42,7 @@ export function Projects() {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="reveal-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

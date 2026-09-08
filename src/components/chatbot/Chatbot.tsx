@@ -202,7 +202,7 @@ export function Chatbot() {
               type="submit"
               disabled={!inputMessage.trim()}
               aria-label="Enviar mensagem"
-              className="w-9 h-9 rounded-xl bg-theme-brand text-white flex items-center justify-center hover:bg-(--primary-dark) transition-colors disabled:opacity-40 cursor-pointer"
+              className="w-9 h-9 rounded-xl bg-theme-brand text-white flex items-center justify-center hover:bg-(--brand-dark) transition-colors disabled:opacity-40 cursor-pointer"
             >
               <i className="fa-solid fa-paper-plane text-xs"></i>
             </button>

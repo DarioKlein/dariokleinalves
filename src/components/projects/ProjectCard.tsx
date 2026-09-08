@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import type { ProjectItem } from '../../types';
 
@@ -12,9 +13,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
     backend: 'fa-solid fa-server',
     fullstack: 'fa-solid fa-layer-group',
   };
+  const categoryColors = {
+    frontend: 'var(--angular-color)',
+    backend: 'var(--spring-color)',
+    fullstack: 'var(--react-color)',
+  };
+  const accentColor = categoryColors[project.categoryFilter];
 
   return (
-    <div className="bg-theme-card border border-theme-color rounded-2xl overflow-hidden theme-shadow transition-all duration-300 hover:-translate-y-2 hover:border-(--primary-color) flex flex-col group">
+    <div
+      data-reveal="scale"
+      className="project-card bg-theme-card border rounded-2xl overflow-hidden theme-shadow transition-all duration-300 hover:-translate-y-2 flex flex-col group"
+      style={{ '--item-accent': accentColor } as CSSProperties}
+    >
       <div className="relative aspect-video w-full overflow-hidden bg-theme-secondary">
         {project.image ? (
           <img
@@ -24,7 +35,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-(--primary-color)/20 to-(--accent-color)/10 flex flex-col items-center justify-center gap-3 text-(--primary-color)">
+          <div
+            className="w-full h-full flex flex-col items-center justify-center gap-3"
+            style={{ backgroundColor: `color-mix(in srgb, ${accentColor} 8%, var(--bg-secondary))`, color: accentColor }}
+          >
             <i className={`${categoryIcons[project.categoryFilter]} text-4xl`}></i>
             <span className="text-sm font-bold text-theme-primary">{t(project.titleKey)}</span>
           </div>
@@ -45,7 +59,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="p-6 flex-1 flex flex-col justify-between">
         <div>
-          <span className="inline-block text-xs font-bold text-(--primary-color) uppercase tracking-wider mb-2">
+          <span className="inline-block text-xs font-bold uppercase tracking-wider mb-2" style={{ color: accentColor }}>
             {t(project.categoryKey)}
           </span>
 

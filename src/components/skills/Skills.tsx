@@ -1,5 +1,21 @@
+import type { CSSProperties } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { skillCategories } from '../../data/portfolioData';
+
+const skillColors: Record<string, string> = {
+  React: 'var(--react-color)',
+  Angular: 'var(--angular-color)',
+  TypeScript: 'var(--typescript-color)',
+  'Tailwind CSS': 'var(--tailwind-color)',
+  Java: 'var(--java-color)',
+  'Spring Boot': 'var(--spring-color)',
+  'APIs REST': 'var(--spring-color)',
+  'JPA / Hibernate': 'var(--database-color)',
+  'MySQL & PostgreSQL': 'var(--database-color)',
+  MongoDB: 'var(--spring-color)',
+  Docker: 'var(--docker-color)',
+  'Git & GitHub': 'var(--git-color)',
+};
 
 export function Skills() {
   const { t } = useLanguage();
@@ -7,8 +23,8 @@ export function Skills() {
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-secondary">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('skills.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">
@@ -16,9 +32,10 @@ export function Skills() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="reveal-grid grid grid-cols-1 lg:grid-cols-2 gap-10">
           {skillCategories.map((category, catIdx) => (
             <div
+              data-reveal
               key={catIdx}
               className="bg-theme-card border border-theme-color rounded-2xl p-6 sm:p-8 theme-shadow space-y-6"
             >
@@ -31,9 +48,16 @@ export function Skills() {
                 {category.skills.map((skill, sIdx) => (
                   <div
                     key={sIdx}
-                    className="flex items-start gap-3.5 p-3.5 rounded-xl border border-theme-color bg-theme-secondary hover:border-(--primary-color) transition-all hover:translate-x-1"
+                    className="technology-card flex items-start gap-3.5 p-3.5 rounded-xl border bg-theme-secondary transition-all hover:translate-x-1"
+                    style={{ '--item-accent': skillColors[skill.name] } as CSSProperties}
                   >
-                    <div className="w-10 h-10 rounded-xl bg-(--primary-color)/10 text-(--primary-color) flex items-center justify-center text-lg shrink-0">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center text-lg shrink-0"
+                      style={{
+                        color: skillColors[skill.name],
+                        backgroundColor: `color-mix(in srgb, ${skillColors[skill.name]} 11%, transparent)`,
+                      }}
+                    >
                       <i className={skill.icon}></i>
                     </div>
                     <div>

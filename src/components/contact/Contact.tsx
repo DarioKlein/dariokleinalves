@@ -8,8 +8,8 @@ export function Contact() {
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-secondary">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('contact.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">
@@ -18,7 +18,7 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-5 space-y-6">
+          <div data-reveal="left" className="lg:col-span-5 space-y-6">
             <h3 className="text-2xl font-bold text-theme-primary">
               {t('contact.heading')}
             </h3>
@@ -94,7 +94,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-7 bg-theme-card border border-theme-color rounded-2xl p-6 sm:p-8 theme-shadow">
+          <div data-reveal="right" className="lg:col-span-7 bg-theme-card border border-theme-color rounded-2xl p-6 sm:p-8 theme-shadow">
             <ContactForm />
           </div>
         </div>

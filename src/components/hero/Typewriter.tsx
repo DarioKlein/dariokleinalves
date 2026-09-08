@@ -42,7 +42,7 @@ export function Typewriter() {
   return (
     <span className="inline-flex items-center text-xl sm:text-2xl md:text-3xl font-bold text-theme-primary tracking-tight">
       <span>{displayText}</span>
-      <span className="inline-block w-0.5 h-6 sm:h-8 ml-1 bg-(--primary-color) animate-cursor-blink" />
+      <span className="inline-block w-0.5 h-6 sm:h-8 ml-1 bg-(--brand-color) animate-cursor-blink" />
     </span>
   );
 }

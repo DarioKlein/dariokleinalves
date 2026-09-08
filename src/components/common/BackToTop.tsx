@@ -43,7 +43,7 @@ export function BackToTop() {
       onClick={scrollToTop}
       aria-label="Voltar ao topo"
       title="Voltar ao topo"
-      className={`fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-(--primary-color) text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 hover:bg-(--primary-dark) cursor-pointer ${
+      className={`fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-theme-brand text-white flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 hover:bg-(--brand-dark) cursor-pointer ${
         pulse ? 'animate-pulse-subtle' : ''
       }`}
     >

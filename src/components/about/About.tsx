@@ -8,8 +8,8 @@ export function About() {
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-theme-secondary">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
-          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--primary-color) uppercase">
+        <div data-reveal className="text-center max-w-2xl mx-auto mb-16 space-y-2">
+          <span className="text-xs sm:text-sm font-semibold tracking-wider text-(--brand-color) uppercase">
             {t('about.subtitle')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-theme-primary tracking-tight">
@@ -18,7 +18,7 @@ export function About() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          <div className="lg:col-span-7 space-y-6">
+          <div data-reveal="left" className="lg:col-span-7 space-y-6">
             <p className="text-lg font-medium text-theme-primary leading-relaxed">
               {t('about.intro')}
             </p>
@@ -49,7 +49,7 @@ export function About() {
               <a
                 href={personalInfo.resumeUrl}
                 download={personalInfo.resumeFileName}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-theme-brand text-white font-semibold text-sm sm:text-base theme-shadow hover:bg-(--primary-dark) transition-all hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-theme-brand text-white font-semibold text-sm sm:text-base theme-shadow hover:bg-(--brand-dark) transition-all hover:scale-105 active:scale-95"
               >
                 <i className="fa-solid fa-download"></i>
                 <span>{t('about.downloadCV')}</span>
@@ -57,7 +57,7 @@ export function About() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
+          <div data-reveal="right" className="lg:col-span-5">
             <Timeline />
           </div>
         </div>

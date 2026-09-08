@@ -52,11 +52,11 @@ export const Navbar: React.FC = () => {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-xl bg-(--primary-color) flex items-center justify-center text-white font-bold text-lg shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <div className="w-9 h-9 rounded-xl bg-theme-brand flex items-center justify-center text-white font-bold text-lg shadow-sm transition-transform duration-300 group-hover:scale-105">
             {personalInfo.shortName.charAt(0)}
           </div>
           <span className="font-semibold text-lg text-theme-primary tracking-tight">
-            {personalInfo.shortName} <span className="text-(--primary-color)">Klein</span>
+            {personalInfo.shortName} <span className="text-(--brand-color)">Klein</span>
           </span>
         </a>
 
@@ -69,7 +69,7 @@ export const Navbar: React.FC = () => {
                   href={item.href}
                   className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-(--primary-color) font-semibold'
+                      ? 'text-(--brand-color) font-semibold'
                       : 'text-theme-secondary hover:text-theme-primary hover:bg-black/5 dark:hover:bg-white/5'
                   }`}
                 >
@@ -137,7 +137,7 @@ export const Navbar: React.FC = () => {
             onClick={toggleTheme}
             aria-label="Alternar tema claro/escuro"
             title="Alternar tema"
-            className="w-9 h-9 rounded-lg border border-theme-color bg-theme-card flex items-center justify-center text-theme-primary hover:text-(--primary-color) hover:border-(--primary-color) transition-colors cursor-pointer"
+            className="w-9 h-9 rounded-lg border border-theme-color bg-theme-card flex items-center justify-center text-theme-primary hover:text-(--brand-color) hover:border-(--brand-color) transition-colors cursor-pointer"
           >
             {theme === 'dark' ? (
               <i className="fa-solid fa-sun text-sm text-yellow-400"></i>
@@ -167,7 +167,7 @@ export const Navbar: React.FC = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   isActive
-                    ? 'bg-(--primary-color)/10 text-(--primary-color) font-semibold'
+                    ? 'bg-(--brand-color)/10 text-(--brand-color) font-semibold'
                     : 'text-theme-primary hover:bg-black/5 dark:hover:bg-white/5'
                 }`}
               >

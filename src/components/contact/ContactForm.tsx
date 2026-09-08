@@ -105,7 +105,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-theme-brand text-white font-semibold text-sm sm:text-base theme-shadow hover:bg-(--primary-dark) transition-all hover:scale-102 active:scale-95 disabled:opacity-50 cursor-pointer"
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-theme-brand text-white font-semibold text-sm sm:text-base theme-shadow hover:bg-(--brand-dark) transition-all hover:scale-102 active:scale-95 disabled:opacity-50 cursor-pointer"
       >
         <i className="fa-solid fa-paper-plane text-sm"></i>
         <span>{status === 'sending' ? t('contact.form.sending') : t('contact.form.send')}</span>
