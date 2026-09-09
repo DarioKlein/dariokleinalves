@@ -56,6 +56,18 @@ export const highlights: Highlight[] = [
 
 export const timelineItems: TimelineItem[] = [
   {
+    id: 'technical-course',
+    period: '2021 - 2023',
+    titleKey: 'timeline.technical.title',
+    descriptionKey: 'timeline.technical.description',
+  },
+  {
+    id: 'ada-tech',
+    period: '2023',
+    titleKey: 'timeline.ada.title',
+    descriptionKey: 'timeline.ada.description',
+  },
+  {
     id: 'cepein',
     period: '2025 - Atual',
     titleKey: 'timeline.cepein.title',
