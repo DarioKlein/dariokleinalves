@@ -5,9 +5,9 @@
   --primary-dark: #09090b;
   --primary-light: #52525b;
   --accent-color: #71717a;
-  --brand-color: #d92d20;
-  --brand-bg: #d92d20;
-  --brand-dark: #b42318;
+  --brand-color: #ff4000;
+  --brand-bg: #df3600;
+  --brand-dark: #c43100;
   --angular-color: #f01928;
   --spring-color: #5b9f32;
   --react-color: #149eca;
@@ -35,9 +35,9 @@
   --primary-dark: #71717a;
   --primary-light: #71717a;
   --accent-color: #52525b;
-  --brand-color: #ff5a4f;
-  --brand-bg: #d92d20;
-  --brand-dark: #b42318;
+  --brand-color: #ff4000;
+  --brand-bg: #df3600;
+  --brand-dark: #c43100;
   --angular-color: #ff3344;
   --spring-color: #7fba4f;
   --react-color: #38bdf8;
@@ -220,11 +220,11 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: var(--react-color);
+  background-color: var(--brand-color);
   border-radius: 50%;
   pointer-events: none;
   animation: particleDrift 12s linear infinite;
-  box-shadow: 0 0 8px var(--react-color);
+  box-shadow: 0 0 8px var(--brand-color);
 }
 
 @keyframes bounceDown {

@@ -217,7 +217,7 @@ export function Chatbot() {
         className="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-theme-brand text-white flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 cursor-pointer"
       >
         {hasUnread && !isOpen && (
-          <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-red-500 text-white font-bold text-[11px] flex items-center justify-center border-2 border-theme-card animate-pulse">
+          <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-theme-brand text-white font-bold text-[11px] flex items-center justify-center border-2 border-theme-card animate-pulse">
             1
           </span>
         )}

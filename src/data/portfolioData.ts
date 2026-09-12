@@ -131,12 +131,33 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: ProjectItem[] = [
   {
+    id: 'clinica-restauracao',
+    titleKey: 'projects.clinica.title',
+    categoryKey: 'projects.frontend.category',
+    categoryFilter: 'frontend',
+    descriptionKey: 'projects.clinica.description',
+    technologies: ['Angular', 'TypeScript', 'PrimeNG', 'Tailwind CSS'],
+    image: '/clinica-restauracao.png',
+    linkUrl: 'https://github.com/LuisFelipedaSilvaE/restauracao-clinica-angular',
+  },
+  {
+    id: 'nexus-app',
+    titleKey: 'projects.nexus.title',
+    categoryKey: 'projects.frontend.category',
+    categoryFilter: 'frontend',
+    descriptionKey: 'projects.nexus.description',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'React Router'],
+    image: '/nexus-app.png',
+    linkUrl: 'https://github.com/DarioKlein/nexus-app-react',
+  },
+  {
     id: 'ecopass',
     titleKey: 'projects.ecopass.title',
     categoryKey: 'projects.backend.category',
     categoryFilter: 'backend',
     descriptionKey: 'projects.ecopass.description',
     technologies: ['Java 21', 'Spring Boot', 'MapStruct', 'Spring Validation'],
+    image: '/ecopass.png',
     linkUrl: 'https://github.com/DarioKlein/ecopass-api-springboot',
   },
   {
